@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cur Prefixer</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 10px; font-size: 16px; }
+    #result { margin-top: 20px; font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h1>Cur Prefixer</h1>
+  <p>Enter a sentence:</p>
+  <input type="text" id="inputText" placeholder="Type something...">
+  <button onclick="addCur()">Transform</button>
+  <p id="result"></p>
+
+  <script>
+    function addCur() {
+      const input = document.getElementById("inputText").value;
+      const words = input.split(" ");
+      const output = words.map(word => "cur" + word).join(" ");
+      document.getElementById("result").textContent = output;
+    }
+  </script>
+</body>
+</html>
